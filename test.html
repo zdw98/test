@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .title{
+        display: block;
+        height: 30px;
+        line-height: 30px;
+    }
+    .txtRed{
+        color: red;
+    }
+    #headTitle{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .fieldGroup{
+        display: block;
+    }
+    #submitButtonRow{
+        display: block;
+        margin-top: 10px;
+    }
+
+    #mainForm{
+        width: 300px;
+    }
+    #submitButton{
+        width: 255px;
+        background: #DDDDDD;
+        color: #B17002;
+        height: 25px;
+        border: 0px;
+        cursor:pointer;
+    }
+    #submitButton:hover{
+        background: orange;
+        color: white;
+    }
+    .field{
+        width: 250px;
+        height: 20px;
+    }
+</style>
+<div id="content">
+    <div id="headTitle">
+        学生信息
+    </div>
+    <form id="mainForm" action="#">
+        <fieldset>
+            <legend style="color: red; font-size: 20px">学生档案</legend>
+            <div class="fieldGroup">
+                <label>
+                    <div class="title">姓名：</div>
+                    <input type="text" class="field"  name="name" required="required" placeholder="请输入姓名"><span class="txtRed">   *</span>
+                </label>
+            </div>
+            <div class="fieldGroup">
+                <label>
+                    <div class="title">学号：</div>
+                    <input type="text" class="field"  name="no" required="required" placeholder="请输入学号"><span class="txtRed">   *</span>
+                </label>
+            </div>
+            <div class="fieldGroup">
+                <label>
+                    <div class="title">手机号码：</div>
+                    <input type="text" class="field"  name="phone" required="required" placeholder="请输入手机号"><span class="txtRed">   *</span>
+                </label>
+            </div>
+            <div class="fieldGroup">
+                <label>
+                    <div class="title">邮箱地址：</div>
+                    <input type="text" class="field"  name="email" required="required" placeholder="请输入邮箱地址"><span class="txtRed">   *</span>
+                </label>
+            </div>
+            <div class="fieldGroup">
+                <label>
+                    <div class="title">录取学校：</div>
+                    <input type="search" class="field"  name="school"  list="schoolList">
+                </label>
+                <datalist id="schoolList">
+                    <option value="北京大学">北京大学</option>
+                    <option value="清华大学">清华大学</option>
+                    <option value="家里蹲大学">家里蹲大学</option>
+                </datalist>
+            </div>
+            <div class="fieldGroup">
+                <label>
+                    <div class="title">入学成绩：</div>
+                    <input type="number" class="field"  name="score">
+                </label>
+            </div>
+            <div class="fieldGroup">
+                <label>
+                    <div class="title">入学时间：</div>
+                    <input type="date" class="field" name="date">
+                </label>
+            </div>
+
+            <div id="submitButtonRow">
+                <input id="submitButton" type="submit">
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div></div>
+
+</body>
+</html>
